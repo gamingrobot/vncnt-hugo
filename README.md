@@ -2,9 +2,10 @@
 
 This is a simple theme for [**hugo**](https://gohugo.io/) which can serve as a template for personal landing pages.
 
-## Changes in this fork:
+## Changes in this fork
 
 - Use Simple Icons instead of font awesome
+- Simplify config
 
 
 ## Installation
