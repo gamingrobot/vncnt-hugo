@@ -52,7 +52,7 @@ Uses [simple-icons](https://github.com/simple-icons/simple-icons) for brand icon
 
 Uses [feather](https://github.com/feathericons/feather) for generic icons.
 
-The Raleway font files in `static/fonts` are licensed under the SIL Open Font License 1.1 (see `static/fonts/OFL.txt`)
+The Source Sans Pro font files in `static/css/fonts` are licensed under the SIL Open Font License 1.1 (see `static/css/fonts/OFL.txt`)
 
 ### Tracking
 
