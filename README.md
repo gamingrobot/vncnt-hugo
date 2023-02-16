@@ -5,8 +5,8 @@ This is a simple theme for [**hugo**](https://gohugo.io/) which can serve as a t
 ## Changes in this fork
 
 - Use Simple Icons instead of font awesome
+- Use Source Sans Pro instead of Raleway
 - Simplify config
-
 
 ## Installation
 
