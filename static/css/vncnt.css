@@ -20,25 +20,21 @@
 
 @media screen and (prefers-color-scheme: dark) {
   :root {
-    /* dark theme: light background, dark text, blue accent */
-    --theme-hue: 0;         /* black */
-    --accent-hue: 194;      /* blue */
+    --text-color-richer: #f9f9f9;  /*     */
+    --text-color-normal: #f9f9f9;  /* text color; button:hover:focus color */
+    --text-color-softer: #f9f9f9;  /* button color; button:hover border */
 
-    --text-color-richer: hsl(var(--theme-hue), 0%, 95%);  /*     */
-    --text-color-normal: hsl(var(--theme-hue), 0%, 80%);  /* text color; button:hover:focus color */
-    --text-color-softer: hsl(var(--theme-hue), 0%, 67%);  /* button color; button:hover border */
+    --accent-color: #f9f9f9;         /* link; button-primary bg+border; textarea,select:focus border */
+    --accent-color-hover: #268bd2;   /* link hover; button-primary:hover:focus bg+border */
 
-    --accent-color: hsl(var(--accent-hue), 76%, 49%);         /* link; button-primary bg+border; textarea,select:focus border */
-    --accent-color-hover: hsl(var(--accent-hue), 86%, 57%);   /* link hover; button-primary:hover:focus bg+border */
-
-    --border-color: hsl(var(--theme-hue), 0%, 27%);           /* button border */
-    --border-color-softer: hsl(var(--theme-hue), 0%, 20%);    /* textarea,select,code,td,hr border   */
+    --border-color: #062F4F;           /* button border */
+    --border-color-softer: #062F4F;    /* textarea,select,code,td,hr border   */
   
-    --background-color: hsl(var(--theme-hue), 0%, 12%);       /* body background; textarea,select background */
-    --background-color-softer: hsl(var(--theme-hue), 0%, 18%);
-    --code-background: hsl(var(--theme-hue), 0%, 5%);         /* code background*/
+    --background-color: #062F4F;       /* body background; textarea,select background */
+    --background-color-softer: #062F4F;
+    --code-background: #1e4360;         /* code background*/
 
-    --button-primary-color: white;
+    --button-primary-color: #f9f9f9;
   }
   
   img.value-img {
@@ -86,6 +82,7 @@ p.reset-margin {
   box-sizing: border-box;
   display: block;
   margin: auto;
+  border: 5px solid var(--accent-color);
 }
 
 .autocenter {
@@ -101,11 +98,24 @@ p.reset-margin {
 }
 
 .icon {
-  text-rendering: geometricPrecision !important;
-  text-decoration: none;
-  border-bottom: none;
   position: relative;
-  color: #555555;
+  margin: .2rem;
+  display: inline-block;
+  color: var(--button-primary-color);
+  fill: var(--button-primary-color);
+}
+
+.icon:hover {
+  color: var(--accent-color-hover);
+  fill: var(--accent-color-hover);
+}
+
+.icon svg {
+  width: 43px;
+}
+
+code {
+  text-align: left;
 }
 
 /* Larger than mobile (default point when grid becomes active) */

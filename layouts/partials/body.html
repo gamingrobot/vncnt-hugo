@@ -13,20 +13,18 @@
         <section id="contact" aria-label="Contact">
           <div class="icons" aria-label="Links">
           <h2 class="h3-like" aria-label="Link Icons">
-            {{ with .Site.Params.email }}<a class="icon" href="mailto:{{ . }}" target="_blank" rel="noopener">
-              <i class="fas fa-envelope" title="email" aria-label="Send email."></i>
-            </a>{{ end }}
+            {{ with .Site.Params.email }}<a class="icon" href="mailto:{{ . }}" target="_blank" rel="noopener" title="Mail">{{- readFile "/assets/svg/mail.svg" | safeHTML -}}</a>{{ end }}
             {{ range $contact_key,  $contact := .Site.Params.contact }}
               {{ if reflect.IsMap $contact }}
-              {{ $style := default "fas" (index $contact "style") }}
-              {{ $icon := default $contact_key (index $contact "icon") }}
-              {{ $label := default $contact_key (index $contact "name") }}
-              {{ $relme := cond (default false (index $contact "rel-me")) " me" "" }}
+              {{- $icon := default $contact_key (index $contact "icon") -}}
+              {{- $iconPath := print "/assets/svg/" $icon ".svg" -}}
+              {{- $relme := cond (default false (index $contact "rel-me")) " me" "" -}}
               <a class="icon" href="{{ index $contact "link" | safeURL }}" target="_blank" rel="noopener{{ $relme }}">
-              <i class="{{ $style }} fa-{{ $icon }}" title="{{ $label }}" aria-label="Go to {{ $label }}."></i>
+              {{- readFile $iconPath | safeHTML -}}
               {{ else }}
+              {{- $iconPath := print "/assets/svg/" $contact_key ".svg" -}}
               <a class="icon" href="{{ $contact | safeURL }}" target="_blank" rel="noopener">
-              <i class="fab fa-{{ $contact_key }}" title="{{ $contact_key }}" aria-label="Go to {{ $contact_key }}."></i>
+              {{- readFile $iconPath | safeHTML -}}
               {{ end }}
             </a>{{ end }}
           </h2>

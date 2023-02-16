@@ -1,22 +1,27 @@
-# vncnt-hugo
+# Fork of vncnt-hugo
 
 This is a simple theme for [**hugo**](https://gohugo.io/) which can serve as a template for personal landing pages.
+
+## Changes in this fork:
+
+- Use Simple Icons instead of font awesome
+
 
 ## Installation
 
 Clone this repo into your `themes` directory of your **hugo** website:
 ```
-git clone https://github.com/fncnt/vncnt-hugo themes/vncnt-hugo
+git clone https://github.com/gamingrobot/vncnt-hugo themes/vncnt-hugo
 ```
 Or even better, add this repository as a submodule of your **hugo** website, if you are using `git` for it:
 ```
-git submodule add https://github.com/fncnt/vncnt-hugo themes/vncnt-hugo
+git submodule add https://github.com/gamingrobot/vncnt-hugo themes/vncnt-hugo
 ```
 
 ## Configuration
 
 Copy the `config.toml` file of the theme into the main directory of your **hugo** website.
-You may want to adjust the value of `baseURL` as well as the parameters in the `[params]` section.
+You should adjust the value of `baseURL` as well as the parameters in the `[params]` section.
 
 If you set `email` in `[params]`, the link to your email will appear in front of all keys set in `[params.contact].`
 
@@ -26,16 +31,14 @@ To add a link to a preferred service of your choice simply add a suitable key to
 ```
 linkedin = "https://www.linkedin.com/in/jdoe"
 ```
-Please note that the key must correspond to a [fontawesome brands icon](https://fontawesome.com/icons?d=gallery&s=brands).
+Please note that the key must correspond to a [simple icons icon](layouts/partials/svg/simple-icons).
 Also, regardless of the key order in your `config.toml` file, the links will be ordered lexicographically due to the usage of [`range`](https://golang.org/pkg/text/template/#hdr-Actions).
 
 However, you may specify contact links more verbosely, as documented in [`config.toml`](config.toml).
-This allows to use other fontawesome styles and manually sort contact links.
 
 #### `rel="me"`
 
 This theme now allows to set the [`rel="me"`](https://microformats.org/wiki/rel-me) value manually.
-Previously, this was always set but now is done on an opt-in basis to give more control over link verification.
 Services like Github or [Mastodon](https://docs.joinmastodon.org/user/profile/#verification) make use of this.
 An example is given in the provided `config.toml` file.
 
@@ -44,7 +47,9 @@ An example is given in the provided `config.toml` file.
 The spine (I'm so sorry) of this theme is made of [`Barebones`](https://github.com/acahir/Barebones).
 Both `normalize.css` and `barebones.css` are licensed unter the MIT License.
 
-This theme relies on fontawesome. The included files in `static/webfonts` are used under the SIL Open Font License 1.1 as described in `static/css/all.min.css`. The latter file is licensed under the MIT License.
+Uses [simple-icons](https://github.com/simple-icons/simple-icons) for brand icons.
+
+Uses [feather](https://github.com/feathericons/feather) for generic icons.
 
 The Raleway font files in `static/fonts` are licensed under the SIL Open Font License 1.1 (see `static/fonts/OFL.txt`)
 
