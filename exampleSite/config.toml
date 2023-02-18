@@ -33,6 +33,8 @@ _merge = "none"
   favicon = "img/favicon.ico"
   error404 = "There is no such page."
 
+  # https://www.goatcounter.com/
+  # goatcounter = "your-goatcounter-site-code"
 
   [params.contact]
     # the default icons with key-value-pairs

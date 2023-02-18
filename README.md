@@ -7,6 +7,7 @@ This is a simple theme for [**hugo**](https://gohugo.io/) which can serve as a t
 - Use Simple Icons instead of font awesome
 - Use Source Sans Pro instead of Raleway
 - Simplify config
+- Add support for GoatCounter
 
 ## Installation
 
@@ -24,7 +25,12 @@ git submodule add https://github.com/gamingrobot/vncnt-hugo themes/vncnt-hugo
 Copy the `config.toml` file of the theme into the main directory of your **hugo** website.
 You should adjust the value of `baseURL` as well as the parameters in the `[params]` section.
 
+
+### Params
+
 If you set `email` in `[params]`, the link to your email will appear in front of all keys set in `[params.contact].`
+
+`goatcounter = "your-goatcounter-site-code"`: Enables [GoatCounter](https://www.goatcounter.com/)
 
 ### Changing Contact Links
 
@@ -59,6 +65,8 @@ The Source Sans Pro font files in `static/css/fonts` are licensed under the SIL 
 The theme supports Google Analytics using Hugo's internal templates. To enable
 tracking, set the [googleAnalytics](https://gohugo.io/templates/internal/#configure-google-analytics)
 and (optionally) [privacy](https://gohugo.io/about/hugo-and-gdpr/#all-privacy-settings) configuration values.
+
+The theme also supports [GoatCounter](https://www.goatcounter.com/) analytics
 
 ## Dark Mode
 

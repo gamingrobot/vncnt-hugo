@@ -5,11 +5,11 @@
   <div class="error404">
     <div class="grid-container full" role="main">
       <div>
-        <h1>{{ "**404**" | markdownify }}</h1>
+        <h2>{{ "**404**" | markdownify }}</h2>
       {{ with .Site.Params.error404 }}
-        <h2 aria-label="{{ . | markdownify }}">{{ "---" | markdownify }}{{ . | markdownify }}</h2>
+        <h3 aria-label="{{ . | markdownify }}">{{ "---" | markdownify }}{{ . | markdownify }}</h3>
       {{ else }}
-        <h2 aria-label="{{ "There is no such page." | markdownify }}">{{ "---" | markdownify }}{{ "There is no such page." | markdownify}}</h2>
+        <h3 aria-label="{{ "There is no such page." | markdownify }}">{{ "---" | markdownify }}{{ "There is no such page." | markdownify}}</h3>
       {{ end }}
       </div>
     </div>
